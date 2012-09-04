@@ -19,9 +19,9 @@
 
 		var headers = $(options.header);
 		var contents = $(options.content);
+		var clickables = headers;
 
-		if ( headers.is('a') ) { var clickables = headers; }
-		else { var clickables = headers.find('a'); }
+		if ( !headers.is('a') ) { clickables = clickables.find('a'); }
 
 		function setActive(index) {
 			options.before();
