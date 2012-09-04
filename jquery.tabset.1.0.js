@@ -19,8 +19,8 @@
 
 		var headers = $(options.header);
 		var contents = $(options.content);
-		var clickables = headers;
-
+		
+		var clickables = headers
 		if ( !headers.is('a') ) { clickables = clickables.find('a'); }
 
 		function setActive(index) {
